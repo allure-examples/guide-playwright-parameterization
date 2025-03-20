@@ -1,15 +1,15 @@
-import { expect, test } from 'playwright/test';
+import { expect, test } from "playwright/test";
 import * as allure from 'allure-js-commons';
 
 const sum = (a: number, b: number) => {
     return a + b;
 };
 
-test('basic sum', async () => {
+test("basic sum", async () => {
   expect(sum(1, 2)).toBe(3);
 });
 
-test('loop sum', async () => {
+test("loop sum", async () => {
     const testData: [number, number, number][] = [
       [1, 2, 3],
       [1, -1, 0],
