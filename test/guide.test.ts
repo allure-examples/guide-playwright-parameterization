@@ -34,7 +34,7 @@ testCases.forEach(({ x, y, expectedSum }) => {
 });
 
 testCases.forEach(({ x, y, expectedSum }) => {
-  test(`sum of ${x} and ${y} should be ${expectedSum}`, async () => {
+  test(`the sum of ${x} and ${y} should be ${expectedSum} (with Allure parameters)`, async () => {
     await allure.parameter("x", x.toString());
     await allure.parameter("y", y.toString());
     await allure.parameter("expectedSum", expectedSum.toString());

@@ -34,7 +34,7 @@ test("loop sum", async () => {
   { x: 1, y: -1, expectedSum: 0 },
   { x: 0, y: 0, expectedSum: 0 },
 ].forEach(({ x, y, expectedSum }) => {
-  test(`sum of ${x} and ${y} should be ${expectedSum}`, async () => {
+  test(`the sum of ${x} and ${y} should be ${expectedSum} (with Allure parameters)`, async () => {
     await allure.parameter("x", x);
     await allure.parameter("y", y);
     await allure.parameter("expectedSum", expectedSum);
