@@ -1,9 +1,9 @@
 import { expect, test } from 'playwright/test';
 import * as allure from 'allure-js-commons';
 
-function sum(a: number, b: number): number {
+const sum = (a: number, b: number) => {
     return a + b;
-}
+};
 
 test('basic sum', async () => {
   expect(sum(1, 2)).toBe(3);
