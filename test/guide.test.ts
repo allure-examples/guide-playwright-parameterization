@@ -28,7 +28,7 @@ const testCases: { x: number; y: number; expectedSum: number }[] = [
 ];
 
 testCases.forEach(({ x, y, expectedSum }) => {
-  test(`the sum of ${x} and ${y} should be ${expectedSum}`, async () => {
+  test(`the sum of ${x} and ${y} should be ${expectedSum}`, () => {
     expect(sum(x, y)).toBe(expectedSum);
   });
 });
