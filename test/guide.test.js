@@ -5,11 +5,11 @@ const sum = (a, b) => {
   return a + b;
 };
 
-test("basic sum", async () => {
+test("basic sum", () => {
   expect(sum(1, 2)).toBe(3);
 });
 
-test("loop sum", async () => {
+test("loop sum", () => {
   [
     [1, 2, 3],
     [1, -1, 0],
@@ -24,8 +24,8 @@ test("loop sum", async () => {
   { x: 1, y: -1, expectedSum: 0 },
   { x: 0, y: 0, expectedSum: 0 },
 ].forEach(({ x, y, expectedSum }) => {
-  test(`the sum of ${x} and ${y} should be ${expectedSum}`, async () => {
-    await expect(sum(x, y)).toBe(expectedSum);
+  test(`the sum of ${x} and ${y} should be ${expectedSum}`, () => {
+    expect(sum(x, y)).toBe(expectedSum);
   });
 });
 
@@ -39,6 +39,6 @@ test("loop sum", async () => {
     await allure.parameter("y", y);
     await allure.parameter("expectedSum", expectedSum);
 
-    await expect(sum(x, y)).toBe(expectedSum);
+    expect(sum(x, y)).toBe(expectedSum);
   });
 });

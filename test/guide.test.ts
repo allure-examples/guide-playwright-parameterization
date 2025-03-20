@@ -5,17 +5,17 @@ const sum = (a: number, b: number) => {
     return a + b;
 };
 
-test("basic sum", async () => {
+test("basic sum", () => {
   expect(sum(1, 2)).toBe(3);
 });
 
-test("loop sum", async () => {
+test("loop sum", () => {
     const testData: [number, number, number][] = [
       [1, 2, 3],
       [1, -1, 0],
       [0, 0, 0],
     ];
-  
+
     for (const [a, b, expected] of testData) {
       expect(sum(a, b)).toBe(expected);
     }
@@ -39,6 +39,6 @@ testCases.forEach(({ x, y, expectedSum }) => {
     await allure.parameter("y", y.toString());
     await allure.parameter("expectedSum", expectedSum.toString());
 
-    await expect(sum(x, y)).toBe(expectedSum);
+    expect(sum(x, y)).toBe(expectedSum);
   });
 });
