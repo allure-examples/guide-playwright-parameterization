@@ -14,7 +14,7 @@ test("loop sum", () => {
     [1, 2, 3],
     [1, -1, 0],
     [0, 0, 0],
-  ].forEach(testData => {
+  ].forEach((testData) => {
     expect(sum(testData[0], testData[1])).toBe(testData[2]);
   });
 });
